@@ -25,15 +25,19 @@ body {
     font-family: 'Yeseva One';
 }
 
+* {
+  box-sizing: border-box;
+}
+
+
 div {
-    box-sizing: border-box;
+  display: block;
+  position: inherit;
 }
 
 header {
     height: 110px;
     width: 1600px;
-    margin: 0;
-    padding: 0;
     background: linear-gradient(to bottom, black, transparent);
     position: absolute;
 }
@@ -41,15 +45,16 @@ header {
 .container {
     width: 1250px;
     margin: 0 auto;
+    position: relative
 }
 
 .header__logo {
-    float: left;
+  float: left;
+    padding: 0px 3px;
 }
 
 .header__logo p {
-    padding-top: 4px;
-    padding-left: 4px;
+  padding: 4px 0px;
     text-transform: uppercase;
     color: #fff;
     font-size: 36.03px;
@@ -63,10 +68,8 @@ nav {
 }
 
 .nav-menu {
-    padding: 0;
     margin: 0;
     display: block;
-
 }
 
 .nav-menu li {
@@ -132,36 +135,36 @@ nav {
 }
 
 .promo-section {
-    margin: 0;
+    padding: 100px 0px;
     text-align: center;
     color: #fff;
     height: 750px;
     background: url(../images/section-promo__background.png) no-repeat center top;
 }
 
-.promo-section h1 {
+.promo-section h2 {
     margin: 0 auto;
-    padding-top: 220px;
+    padding-top: 120px;
     font-family: 'Yeseva One';
     font-size: 90px;
 }
 
 .promo-section p {
     margin-top: 12px;
-    margin-bottom: 0;
 }
 
 .promo-section img {
-    margin-top: 35px;
-    margin-left: 6px;
+  position: inherit;
+      bottom: 56px;
+      left: 3px;
 }
-
+.promo-section__buttons {
+  bottom: 56px;
+}
 .promo-section button {
-    height: 57px;
-    width: 228px;
-    margin-top: 30px;
-    margin-left: 12px;
-    margin-right: 14px;
+  height: 57px;
+  width: 228px;
+  margin: 30px 13px;
 }
 
 .promo-section a {
@@ -193,34 +196,42 @@ nav {
 
 .about-section {
     margin: 0;
-    padding: 0;
+    padding: 100px 0px;
     text-align: center;
     color: #cc9900;
     height: 710px;
     background-image: url(../images/pattern.png);
 }
 
+.about-section__b-description {
+  width: 50%;
+      position: inherit;
+      left: 8px;
+}
+
+.about-section figure {
+position: inherit;
+}
 .about-section h3 {
     font-family: 'Yeseva One';
     font-size: 36px;
     text-decoration: none;
     cursor: default;
-    margin: 0 auto;
-    padding-top: 100px;
-    padding-right: 601px
+    margin: 0;
+    padding-left: 4px;
 }
 
 .about-section__about__divider {
-    padding-top: 14px;
-    padding-right: 602px;
+  margin-top: 14px;
+      margin-left: 4px;
 }
 
 .about-section figcaption {
     font-family: 'Lato';
     font-size: 16px;
     color: black;
-    padding-right: 600px;
-    margin: 0;
+    position: inherit;
+    bottom: 629px;
 }
 
 .about-section figcaption :first-child {
@@ -229,11 +240,18 @@ nav {
 
 .about-section p {
     margin: 0 auto;
-    padding-top: 5px
+    padding-top: 5px;
+        padding-left: 6px;
 }
 
-.about-section figure img {
-    display: inline-block;
-    position: absolute;
-    float: right;
+.main-img {
+  position: relative;
+  bottom: 144px;
+  left: 516px;
+}
+
+.secondary-img {
+  position: relative;
+top: 52px;
+left: 39px;
 }
