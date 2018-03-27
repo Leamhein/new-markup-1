@@ -14,10 +14,6 @@
     font-family: 'Open Sans', serif;
 }
 
-html {
-    margin: 0;
-}
-
 body {
     width: 1600px;
     margin: 0 auto;
@@ -25,14 +21,18 @@ body {
     font-family: 'Yeseva One';
 }
 
+main {
+    background-image: url(../images/pattern.png);
+}
+
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
 div {
-  display: block;
-  position: inherit;
+    display: block;
+    position: inherit;
 }
 
 header {
@@ -45,26 +45,27 @@ header {
 .container {
     width: 1250px;
     margin: 0 auto;
-    position: relative
+    position: relative;
 }
 
 .header__logo {
-  float: left;
-    padding: 0px 3px;
+    float: left;
+    left: 3px;
 }
 
 .header__logo p {
-  padding: 4px 0px;
+    padding: 4px 1px;
     text-transform: uppercase;
     color: #fff;
-    font-size: 36.03px;
+    font-size: 36px;
     font-family: 'Yeseva One';
 }
 
 nav {
+    position: inherit;
     height: 110px;
     float: right;
-    margin-right: 24px
+    right: 24px;
 }
 
 .nav-menu {
@@ -85,7 +86,6 @@ nav {
 }
 
 .nav-menu a {
-    position: relative;
     color: #fff;
     font-size: 21px;
     font-family: 'Gentium Book Basic';
@@ -135,7 +135,7 @@ nav {
 }
 
 .promo-section {
-    padding: 100px 0px;
+    padding: 100px 0;
     text-align: center;
     color: #fff;
     height: 750px;
@@ -154,17 +154,19 @@ nav {
 }
 
 .promo-section img {
-  position: inherit;
-      bottom: 56px;
-      left: 3px;
+    position: inherit;
+    bottom: 56px;
+    left: 3px;
 }
+
 .promo-section__buttons {
-  bottom: 56px;
+    bottom: 56px;
 }
+
 .promo-section button {
-  height: 57px;
-  width: 228px;
-  margin: 30px 13px;
+    height: 57px;
+    width: 228px;
+    margin: 30px 13px;
 }
 
 .promo-section a {
@@ -178,16 +180,16 @@ nav {
 
 .promo-section__buttons__b-book {
     border: solid 2px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .promo-section__buttons__b-book:hover {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .promo-section__buttons__b-menu {
     border: solid 2px white;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .promo-section__buttons__b-menu:hover {
@@ -196,23 +198,23 @@ nav {
 
 .about-section {
     margin: 0;
-    padding: 100px 0px;
+    padding: 100px 0;
     text-align: center;
     color: #cc9900;
     height: 710px;
-    background-image: url(../images/pattern.png);
 }
 
 .about-section__b-description {
-  width: 50%;
-      position: inherit;
-      left: 8px;
+    width: 50%;
+    position: inherit;
+    left: 8px;
 }
 
 .about-section figure {
-position: inherit;
+    position: inherit;
 }
-.about-section h3 {
+
+.about-section h2 {
     font-family: 'Yeseva One';
     font-size: 36px;
     text-decoration: none;
@@ -222,8 +224,8 @@ position: inherit;
 }
 
 .about-section__about__divider {
-  margin-top: 14px;
-      margin-left: 4px;
+    margin-top: 14px;
+    margin-left: 4px;
 }
 
 .about-section figcaption {
@@ -231,27 +233,165 @@ position: inherit;
     font-size: 16px;
     color: black;
     position: inherit;
-    bottom: 629px;
+    top: 3px;
+    left: 1px;
 }
 
-.about-section figcaption :first-child {
-    padding-top: 8px;
-}
 
 .about-section p {
     margin: 0 auto;
     padding-top: 5px;
-        padding-left: 6px;
+    padding-left: 6px;
 }
 
 .main-img {
-  position: relative;
-  bottom: 144px;
-  left: 516px;
+    position: absolute;
+    bottom: -360px;
+    left: 516px;
 }
 
 .secondary-img {
-  position: relative;
-top: 52px;
-left: 39px;
+    position: absolute;
+    top: 172px;
+    left: 201px;
+}
+
+.ingredients-section {
+    height: 758px;
+    width: 100%;
+    background: url(/images/ingredients-section_background.png)
+}
+
+.ingredinets-description {
+    box-sizing: border-box;
+    position: inherit;
+    height: 557px;
+    width: 570px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.67);
+    left: 640px;
+    top: 100px;
+    padding: 41px 70px;
+}
+
+.ingredinets-description h2 {
+    font-family: 'Yeseva One';
+    font-size: 36px;
+    color: white;
+    margin: 0 auto;
+    padding: 35px 0 5px 0;
+}
+
+.ingredients-section__divider {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.ingredients {
+    width: 100%;
+    height: 20%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.ingredinets-description p {
+    font-family: 'Lato';
+    font-size: 16px;
+    color: white;
+    margin: 0;
+    padding: 2px;
+}
+
+.ingredients figcaption :last-child {
+    padding: 6px;
+}
+
+.ingredinets-images {
+    height: 100px;
+    width: 100%;
+    margin: 70px 0;
+}
+
+.ingredinets-images div {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 0 18px;
+
+    Box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.ingredinets-img1 {
+    background: url(/images/ingredient-img1.png);
+    background-position: -42px -25px;
+}
+
+.ingredinets-img2 {
+    background: url(/images/ingredient-img2.png);
+    background-position: -44px -90px;
+}
+
+.ingredinets-img3 {
+    background: url(/images/ingredient-img3.png);
+    background-position: -44px -14px;
+}
+
+.menu-section {
+    height: 994px;
+    padding: 100px 0;
+    background: url(/images/menu-pattern.png);
+}
+
+.menu-content {
+    margin: 0 20px;
+}
+
+.menu-item {
+    display: inline-block;
+    width: 430px;
+    margin: 0 82px;
+    
+}
+
+.menu-section h2 {
+    padding-left: 18px;
+    margin: 0 auto;
+    font-family: 'Yeseva One';
+    font-size: 36px;
+    text-transform: capitalize;
+    color: #cc9900;
+    text-align: center;
+}
+
+.menu-section h3 {
+    text-transform: capitalize;
+    color: #cc9900;
+    text-align: left;
+    font-family: 'Yeseva One';
+    font-size: 21px;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-section img {
+    margin: 14px 100px;
+}
+
+.menu-section {
+    margin: 0 auto;
+}
+
+.dish {
+    left: 6px;
+    bottom: 10px;
+    display: inline-block;
+}
+
+.prise {
+    text-align: right;
+    font-family: 'Yeseva One';
+    font-size: 21px;
+    color: #cc9900;
 }
