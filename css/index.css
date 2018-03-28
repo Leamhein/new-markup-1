@@ -44,8 +44,10 @@ header {
 
 .container {
     width: 1250px;
+    height: 100%;
     margin: 0 auto;
     position: relative;
+
 }
 
 .header__logo {
@@ -259,7 +261,7 @@ nav {
 .ingredients-section {
     height: 758px;
     width: 100%;
-    background: url(/images/ingredients-section_background.png)
+    background: url(../images/ingredients-section_background.png)
 }
 
 .ingredinets-description {
@@ -323,38 +325,42 @@ nav {
 }
 
 .ingredinets-img1 {
-    background: url(/images/ingredient-img1.png);
+    background: url(../images/ingredient-img1.png);
     background-position: -42px -25px;
 }
 
 .ingredinets-img2 {
-    background: url(/images/ingredient-img2.png);
+    background: url(../images/ingredient-img2.png);
     background-position: -44px -90px;
 }
 
 .ingredinets-img3 {
-    background: url(/images/ingredient-img3.png);
+    background: url(../images/ingredient-img3.png);
     background-position: -44px -14px;
 }
 
 .menu-section {
     height: 994px;
     padding: 100px 0;
-    background: url(/images/menu-pattern.png);
+    background: url(../images/menu-pattern.png);
 }
 
 .menu-content {
+    position: relative;
     margin: 0 20px;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .menu-item {
-    display: inline-block;
+    float: left;
     width: 430px;
-    margin: 0 82px;
-    
+    margin: 0 84px 37px 84px;
+    height: 42%;
 }
 
-.menu-section h2 {
+.menu-item h2 {
     padding-left: 18px;
     margin: 0 auto;
     font-family: 'Yeseva One';
@@ -364,34 +370,212 @@ nav {
     text-align: center;
 }
 
-.menu-section h3 {
+.menu-item h3 {
     text-transform: capitalize;
     color: #cc9900;
     text-align: left;
     font-family: 'Yeseva One';
     font-size: 21px;
-    width: 60%;
     margin: 0;
-    padding: 0;
+    width: 430px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #cc9900;
 }
 
-.menu-section img {
-    margin: 14px 100px;
-}
-
-.menu-section {
-    margin: 0 auto;
+.menu-item img {
+    margin: 14px 98px;
 }
 
 .dish {
+    position: relative;
     left: 6px;
-    bottom: 10px;
+    top: 9px;
     display: inline-block;
 }
 
 .prise {
-    text-align: right;
+    position: absolute;
+    left: 377px;
+    bottom: 52px;
     font-family: 'Yeseva One';
     font-size: 21px;
     color: #cc9900;
+}
+
+.dish-info {
+    font-family: 'Lato';
+    font-size: 16px;
+    margin: 12px 0 35px 0;
+}
+
+.menu-column {
+    float: left;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.menu-content :last-child {
+    right: 6px;
+}
+
+.review-section {
+    height: 758px;
+    padding: 100px 0;
+    background: url(../images/review-section__background.png);
+}
+
+.special-offer {
+    position: absolute;
+    width: 455px;
+    height: 102px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.special-tag {
+    position: relative;
+    width: 69px;
+    height: 22px;
+    background-color: #cc9900;
+    color: white;
+    font-family: 'Lato';
+    font-size: 14px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0;
+    padding: 4px 0;
+    left: 380px;
+}
+
+.border {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #cc9900;
+}
+
+.menu-content :first-child .special-offer {
+    left: 82px;
+    top: 607px;
+}
+
+.menu-content :last-child .special-offer {
+    left: 82px;
+    top: 507px;
+}
+
+.review {
+    position: relative;
+    width: 770px;
+    height: 557px;
+    background: url(../images/review-text__background.png);
+    margin: 0 auto;
+    padding: 0 70px;
+    bottom: 5px;
+}
+
+.review h2 {
+    font-family: 'Yeseva One';
+    font-size: 36px;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 76px;
+    margin: 5px;
+}
+
+.review img {
+    margin: 10px 193px;
+}
+
+.review blockquote p {
+    font-family: 'Gentium Book Basic';
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    word-spacing: 3px;
+    margin: 0;
+    padding: 12px 4px 4px 4px;
+}
+
+.review blockquote {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.review cite {
+    display: block;
+    font-family: 'Lato';
+    font-size: 18px;
+    color: white;
+    margin: 37px;
+}
+
+.quote {
+    position: absolute;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 96px;
+    color: white;
+    margin: 0;
+    bottom: 294px;
+    left: 29px
+}
+
+.reservation-section {
+    height: 1030px;
+    padding: 100px 0;
+}
+
+.images {
+    position: absolute;
+    height: 538px;
+    width: 570px;
+    margin: 0;
+    padding: 0;
+    left: 40px;
+
+}
+
+.images :first-child {
+    float: left;
+}
+
+.images :last-child {
+    float: right;
+}
+
+.book {
+    position: absolute;
+    height: 508px;
+    width: 430px;
+    margin: 0;
+    padding: 0;
+    left: 710px;
+    text-align: center;
+}
+
+.book h2 {
+    position: relative;
+    font-family: 'Yeseva One';
+    font-size: 36px;
+    margin: 0 auto;
+    padding: 0;
+    color: #cc9900;
+    top: -4px;
+}
+
+.book img {
+    margin: 10px;
+}
+
+.book p {
+    font-family: 'Lato';
+    font-size: 16px;
+    margin: 11px 0;
+    line-height: 24px;
+}
+
+.booking-form {
+    width: 430px;
 }
