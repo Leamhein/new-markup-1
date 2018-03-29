@@ -406,7 +406,7 @@ nav {
 .dish-info {
     font-family: 'Lato';
     font-size: 16px;
-    margin: 12px 0 35px 0;
+    margin: 11px 0 35px 0;
 }
 
 .menu-column {
@@ -416,7 +416,7 @@ nav {
 }
 
 .menu-content :last-child {
-    right: 6px;
+    right: 3px;
 }
 
 .review-section {
@@ -578,7 +578,10 @@ nav {
 }
 
 .booking-form {
-    width: 432px;
+    position: relative;
+    right: 14px;
+    top: 8px;
+    width: 458px;
     height: 210px;
 }
 
@@ -589,14 +592,15 @@ fieldset {
 input {
     height: 36px;
     width: 200px;
-    margin: 24px 0;
+    margin: 28px 0 18px 0;
 }
 
 select {
     height: 36px;
     width: 200px;
     float: right;
-    margin: 24px 0;
+    margin: 28px 0;
+    border: 2px solid #c8c6c6;
 }
 
 input[type="text"] {
@@ -609,13 +613,19 @@ input[type="text"] {
 input[type="email"] {
     float: right;
     background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #c8c6c6;
 }
 
 input[type="date"] {
     float: left;
     background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #c8c6c6;
 }
 
 label {
     position: absolute;
+}
+
+fieldset p {
+    display: block;
 }
