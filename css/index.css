@@ -727,7 +727,7 @@ input[type="submit"] {
 footer {
     width: 100%;
     height: 320px;
-    padding: 50px 215px;
+    padding: 50px 205px;
     background: #191919;
     grid-row-start: 2;
     grid-row-end: 3;
@@ -740,14 +740,13 @@ footer div {
     width: 390px;
     height: 218px;
     color: white;
-    padding: 0;
     text-align: center;
-
 }
 
 footer img {
     width: 200px;
-    margin: 9px;
+    margin-top: 8px;
+    margin-bottom: 14px;
 }
 
 
@@ -756,4 +755,41 @@ footer h3 {
     font-family: 'Yeseva One';
     font-size: 21px;
     margin: 7px 0px;
+}
+
+footer p {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+footer a {
+   text-decoration: none;
+    color: white;
+    margin: 4px; 
+}
+
+.footer-first-column {
+    margin-right: 10px;
+}
+
+.footer-location {
+    margin-left: 10px;
+}
+
+.footer-social {
+    height: 100%;
+    position: relative;
+    top: 50px;
+    left: 5px;
+}
+
+.footer-payment {
+    height: 100%;
+    position: relative;
+    top: 50px;
+    left: 5px;
 }
