@@ -14,8 +14,15 @@
     font-family: 'Open Sans', serif;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     width: 1600px;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
     margin: 0 auto;
     padding: 0;
     font-family: 'Yeseva One';
@@ -494,14 +501,13 @@ nav {
     font-size: 25px;
     color: white;
     text-align: center;
-    word-spacing: 3px;
+    word-spacing: 4px;
     margin: 0;
-    padding: 12px 4px 4px 4px;
+    padding: 12px 0 4px 0;
 }
 
 .review blockquote {
     margin: 0 auto;
-    padding: 0;
     text-align: center;
 }
 
@@ -518,13 +524,12 @@ nav {
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 96px;
     color: white;
-    margin: 0;
     bottom: 294px;
     left: 29px
 }
 
 .reservation-section {
-    height: 1030px;
+    height: 710px;
     padding: 100px 0;
 }
 
@@ -587,23 +592,30 @@ nav {
 
 fieldset {
     border: none;
+    width: 100%;
 }
 
 input {
     height: 36px;
     width: 200px;
     margin: 28px 0 18px 0;
+    font-size: 16px;
+    color: #7c7c7c;
+    text-indent: 14px;
 }
 
 select {
     height: 36px;
     width: 200px;
     float: right;
-    margin: 28px 0;
+    margin: 6px 2px;
     border: 2px solid #c8c6c6;
+    font-family: 'Open Sans', serif;
+    font-size: 16px;
+    color: #7c7c7c;
 }
 
-input[type="text"] {
+.name-form {
     float: left;
     border: 2px solid #c89f2d;
     outline: none;
@@ -616,16 +628,132 @@ input[type="email"] {
     border: 2px solid #c8c6c6;
 }
 
-input[type="date"] {
+.date-form {
     float: left;
+    margin-top: 16px;
     background: rgba(255, 255, 255, 0.3);
     border: 2px solid #c8c6c6;
+
 }
 
 label {
     position: absolute;
+    font-size: 14px;
+    color: #c9a131;
+    text-transform: capitalize;
+    text-align: left;
 }
 
 fieldset p {
-    display: block;
+    font-family: 'Open Sans', serif;
+}
+
+label[for="name"] {
+    left: 2px;
+}
+
+label[for="email"] {
+    text-align: left;
+    right: 170px
+}
+
+label[for="date"] {
+    top: 96px;
+    left: 0px;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+    visibility: hidden;
+}
+
+::-webkit-calendar-picker-indicator {
+    color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.person-number {
+    top: 96px;
+    left: 0px;
+}
+
+fieldset div :first-child {
+    float: left;
+}
+
+fieldset div :last-child {
+    float: right;
+}
+
+.form-column {
+    position: relative;
+    width: 203px;
+}
+
+select {
+    text-indent: 10px;
+}
+
+.open-button {
+    position: absolute;
+    top: 130px;
+    right: 8px;
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+}
+
+.open-button button {
+    border: none;
+    background: transparent;
+}
+
+input[type="submit"] {
+    font-family: 'Open Sans', serif;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 11px;
+    background: #c9a131;
+    border: none;
+    outline: none;
+}
+
+footer {
+    width: 100%;
+    height: 320px;
+    padding: 50px 215px;
+    background: #191919;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+
+
+footer div {
+    float: left;
+    width: 390px;
+    height: 218px;
+    color: white;
+    padding: 0;
+    text-align: center;
+
+}
+
+footer img {
+    width: 200px;
+    margin: 9px;
+}
+
+
+footer h3 {
+    text-transform: capitalize;
+    font-family: 'Yeseva One';
+    font-size: 21px;
+    margin: 7px 0px;
 }
