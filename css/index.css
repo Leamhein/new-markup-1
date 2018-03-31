@@ -1,17 +1,43 @@
 @font-face {
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Yeseva One';
+    font-weight: 400;
+
+    src: url(../fonts/YesevaOne/YesevaOne-Regular_v2.otf);
 }
 
 @font-face {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato-Regular';
+    font-weight: 400;
+
+    src: url(../fonts/Lato/Lato-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Gentium Book Basic';
+    font-weight: 400;
+
+    src: url(../fonts/GentiumBookClassic/GenBkBasR.ttf);
 }
 
 @font-face {
-    font-family: 'Open Sans', serif;
+    font-family: 'Open Sans';
+    font-weight: 400;
+
+    src: url(../fonts/OpenSans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans Italic';
+    font-weight: 400;
+
+    src: url(../fonts/OpenSans/OpenSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans Bold';
+    font-weight: 400;
+
+    src: url(../fonts/OpenSans/OpenSans-Bold.ttf);
 }
 
 html {
@@ -19,18 +45,22 @@ html {
 }
 
 body {
+    font-family: 'Yeseva One';
+
+    display: grid;
+
     width: 1600px;
     min-height: 100%;
-    display: grid;
-    grid-template-rows: 1fr auto;
     margin: 0 auto;
     padding: 0;
-    font-family: 'Yeseva One';
+
+    grid-template-rows: 1fr auto;
 }
 
 main {
+
+
     background-image: url(../images/pattern.png);
-    min-height: calc(100vh-110px-320px)''
 }
 
 * {
@@ -39,124 +69,170 @@ main {
 
 
 div {
-    display: block;
     position: inherit;
+
+    display: block;
 }
 
 header {
-    height: 110px;
-    width: 1600px;
-    background: linear-gradient(to bottom, black, transparent);
     position: absolute;
+
+    width: 1600px;
+    height: 110px;
+
+    background: linear-gradient(to bottom, black, transparent);
 }
 
 .container {
+    position: relative;
+
     width: 1250px;
     height: 100%;
     margin: 0 auto;
-    position: relative;
-
 }
 
-.header__logo {
-    float: left;
+.header-logo {
     left: 3px;
+
+    float: left;
+
+    cursor: default;
 }
 
-.header__logo p {
-    padding: 4px 1px;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 36px;
+.header-logo p {
     font-family: 'Yeseva One';
+    font-size: 36px;
+
+    padding: 4px 1px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+.header-logo div {
+    display: none;
 }
 
 nav {
     position: inherit;
-    height: 110px;
+    right: 115px;
+
     float: right;
-    right: 24px;
+
+    height: 110px;
 }
 
 .nav-menu {
-    margin: 0;
     display: block;
+
+    margin: 0;
 }
 
-.nav-menu li {
-    float: left;
-    display: block;
+header li {
     font-size: 21px;
+
+    display: block;
+    float: left;
+
     padding-top: 48px;
+
     text-align: center;
 }
 
-.nav-menu li:hover {
+header li:hover {
     box-shadow: inset 0 3px 0 0 #fff;
 }
 
-.nav-menu a {
-    color: #fff;
-    font-size: 21px;
+nav a {
     font-family: 'Gentium Book Basic';
+    font-size: 21px;
+
+    display: block;
+
+    height: 110px;
+
+    cursor: default;
     text-decoration: none;
     text-transform: capitalize;
-    cursor: default;
+
+    color: #fff;
 }
 
 .nav-menu i {
     color: #dab33e;
 }
 
-.nav-menu__b-home {
+.a-home {
     width: 78px;
 }
 
-.nav-menu__b-about {
+.a-about {
     width: 135px;
 }
 
-.nav-menu__b-ingredients {
+.a-ingredients {
     width: 126px;
 }
 
-.nav-menu__b-menu {
+.a-menu {
     width: 116px;
 }
 
-.nav-menu__b-reviews {
+.a-reviews {
     width: 114px;
 }
 
-.nav-menu__b-reservation {
+.a-reservation {
     width: 180px;
 }
 
-.nav-menu__b-social1 {
+.a-social1 {
     width: 27px;
 }
 
-.nav-menu__b-social2 {
+.a-social2 {
     width: 42px;
 }
 
-.nav-menu__b-social3 {
+.a-social3 {
     width: 22px;
 }
 
+.header-social {
+    top: -15px;
+    left: 755px;
+
+    float: right;
+}
+
+.header-social a {
+    display: block;
+
+    height: 110px;
+
+    cursor: default;
+    text-decoration: none;
+
+    color: #c90;
+}
+
 .promo-section {
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
     height: 750px;
+    padding: 100px 0;
+
+    text-align: center;
+
+    color: #fff;
     background: url(../images/section-promo__background.png) no-repeat center top;
 }
 
 .promo-section h2 {
-    margin: 0 auto;
-    padding-top: 120px;
     font-family: 'Yeseva One';
     font-size: 90px;
+
+    margin: 0 auto;
+    padding-top: 120px;
 }
 
 .promo-section p {
@@ -169,55 +245,60 @@ nav {
     left: 3px;
 }
 
-.promo-section__buttons {
+.promo-buttons {
     bottom: 56px;
 }
 
 .promo-section button {
-    height: 57px;
     width: 228px;
+    height: 57px;
     margin: 30px 13px;
 }
 
 .promo-section a {
-    font-family: 'Lato';
+    font-family: 'Lato-Regular';
     font-size: 18px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
+
     cursor: default;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: white;
 }
 
-.promo-section__buttons__b-book {
+.promo-buttons__a-book {
     border: solid 2px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, .6);
 }
 
-.promo-section__buttons__b-book:hover {
-    background: rgba(0, 0, 0, 0.8);
+.promo-buttons__a-book:hover {
+    background: rgba(0, 0, 0, .8);
 }
 
-.promo-section__buttons__b-menu {
+.promo-buttons__a-menu {
     border: solid 2px white;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, .3);
 }
 
-.promo-section__buttons__b-menu:hover {
-    background: rgba(255, 255, 255, 0.7);
+.promo-buttons__a-menu:hover {
+    background: rgba(255, 255, 255, .7);
 }
 
 .about-section {
+    height: 710px;
     margin: 0;
     padding: 100px 0;
+
     text-align: center;
-    color: #cc9900;
-    height: 710px;
+
+    color: #c90;
 }
 
-.about-section__b-description {
-    width: 50%;
+.description {
     position: inherit;
     left: 8px;
+
+    width: 50%;
 }
 
 .about-section figure {
@@ -227,24 +308,28 @@ nav {
 .about-section h2 {
     font-family: 'Yeseva One';
     font-size: 36px;
-    text-decoration: none;
-    cursor: default;
+
     margin: 0;
     padding-left: 4px;
+
+    cursor: default;
+    text-decoration: none;
 }
 
-.about-section__about__divider {
+.about-section__divider {
     margin-top: 14px;
     margin-left: 4px;
 }
 
 .about-section figcaption {
-    font-family: 'Lato';
+    font-family: 'Lato-Regular';
     font-size: 16px;
-    color: black;
+
     position: inherit;
     top: 3px;
     left: 1px;
+
+    color: black;
 }
 
 
@@ -267,29 +352,35 @@ nav {
 }
 
 .ingredients-section {
-    height: 758px;
     width: 100%;
-    background: url(../images/ingredients-section_background.png)
+    height: 758px;
+
+    background: url(../images/ingredients-section_background.png);
 }
 
 .ingredinets-description {
-    box-sizing: border-box;
     position: inherit;
-    height: 557px;
-    width: 570px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.67);
-    left: 640px;
     top: 100px;
+    left: 640px;
+
+    box-sizing: border-box;
+    width: 570px;
+    height: 557px;
     padding: 41px 70px;
+
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, .67);
 }
 
 .ingredinets-description h2 {
     font-family: 'Yeseva One';
     font-size: 36px;
-    color: white;
+
     margin: 0 auto;
     padding: 35px 0 5px 0;
+
+    color: white;
 }
 
 .ingredients-section__divider {
@@ -305,11 +396,13 @@ nav {
 }
 
 .ingredinets-description p {
-    font-family: 'Lato';
+    font-family: 'Lato-Regular';
     font-size: 16px;
-    color: white;
+
     margin: 0;
     padding: 2px;
+
+    color: white;
 }
 
 .ingredients figcaption :last-child {
@@ -317,19 +410,21 @@ nav {
 }
 
 .ingredinets-images {
-    height: 100px;
     width: 100%;
+    height: 100px;
     margin: 70px 0;
 }
 
 .ingredinets-images div {
     display: inline-block;
-    height: 100px;
+
     width: 100px;
-    border-radius: 50%;
+    height: 100px;
     margin: 0 18px;
 
-    Box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+
+    Box-shadow: 0 0 0 5px rgba(0, 0, 0, .5);
 }
 
 .ingredinets-img1 {
@@ -350,44 +445,55 @@ nav {
 .menu-section {
     height: 994px;
     padding: 100px 0;
+
     background: url(../images/menu-pattern.png);
 }
 
 .menu-content {
     position: relative;
-    margin: 0 20px;
-    height: 100%;
+
     overflow: hidden;
+
+    height: 100%;
+    margin: 0 20px;
+
     text-overflow: ellipsis;
 }
 
 .menu-item {
     float: left;
+
     width: 430px;
-    margin: 0 84px 37px 84px;
     height: 42%;
+    margin: 0 84px 37px 84px;
 }
 
 .menu-item h2 {
-    padding-left: 18px;
-    margin: 0 auto;
     font-family: 'Yeseva One';
     font-size: 36px;
-    text-transform: capitalize;
-    color: #cc9900;
+
+    margin: 0 auto;
+    padding-left: 18px;
+
     text-align: center;
+    text-transform: capitalize;
+
+    color: #c90;
 }
 
 .menu-item h3 {
-    text-transform: capitalize;
-    color: #cc9900;
-    text-align: left;
     font-family: 'Yeseva One';
     font-size: 21px;
-    margin: 0;
+
     width: 430px;
+    margin: 0;
     padding-bottom: 7px;
-    border-bottom: 1px solid #cc9900;
+
+    text-align: left;
+    text-transform: capitalize;
+
+    color: #c90;
+    border-bottom: 1px solid #c90;
 }
 
 .menu-item img {
@@ -395,31 +501,38 @@ nav {
 }
 
 .dish {
+    width: 100%;
     position: relative;
-    left: 6px;
     top: 9px;
+    left: 6px;
+
     display: inline-block;
 }
 
 .prise {
-    position: absolute;
-    left: 377px;
-    bottom: 52px;
     font-family: 'Yeseva One';
     font-size: 21px;
-    color: #cc9900;
+
+    position: absolute;
+    top: -21px;
+    left: 377px;
+
+    color: #c90;
 }
 
 .dish-info {
-    font-family: 'Lato';
+    width: 100%;
+    font-family: 'Lato-Regular';
     font-size: 16px;
+
     margin: 11px 0 35px 0;
 }
 
 .menu-column {
     float: left;
-    margin: 0 auto;
+
     width: 50%;
+    margin: 0 auto;
 }
 
 .menu-content :last-child {
@@ -429,67 +542,78 @@ nav {
 .review-section {
     height: 758px;
     padding: 100px 0;
+
     background: url(../images/review-section__background.png);
 }
 
 .special-offer {
     position: absolute;
+
     width: 455px;
     height: 102px;
     margin: 0;
     padding: 0;
-
 }
 
 .special-tag {
+    font-family: 'Lato-Regular';
+    font-size: 14px;
+
     position: relative;
+    left: 383px;
+
     width: 69px;
     height: 22px;
-    background-color: #cc9900;
-    color: white;
-    font-family: 'Lato';
-    font-size: 14px;
-    text-transform: capitalize;
-    text-align: center;
     margin: 0;
     padding: 4px 0;
-    left: 380px;
+
+    text-align: center;
+    text-transform: capitalize;
+
+    color: white;
+    background-color: #c90;
 }
 
 .border {
     width: 100%;
     height: 80px;
-    border: 1px solid #cc9900;
+
+    border: 1px solid #c90;
 }
 
 .menu-content :first-child .special-offer {
-    left: 82px;
     top: 607px;
+    left: 80px;
 }
 
 .menu-content :last-child .special-offer {
-    left: 82px;
-    top: 507px;
+    top: 508px;
+    left: 78px;
 }
 
 .review {
     position: relative;
+    bottom: 5px;
+
     width: 770px;
     height: 557px;
-    background: url(../images/review-text__background.png);
     margin: 0 auto;
     padding: 0 70px;
-    bottom: 5px;
+
+    background: url(../images/review-text__background.png);
 }
 
 .review h2 {
     font-family: 'Yeseva One';
     font-size: 36px;
-    color: white;
-    text-transform: capitalize;
-    text-align: center;
-    padding-top: 76px;
+
     margin: 5px;
+    padding-top: 76px;
+
+    text-align: center;
+    text-transform: capitalize;
+
+    color: white;
 }
 
 .review img {
@@ -499,33 +623,43 @@ nav {
 .review blockquote p {
     font-family: 'Gentium Book Basic';
     font-size: 25px;
-    color: white;
-    text-align: center;
-    word-spacing: 4px;
+
     margin: 0;
     padding: 12px 0 4px 0;
+
+    text-align: center;
+    word-spacing: 4px;
+
+    color: white;
 }
 
 .review blockquote {
     margin: 0 auto;
+
     text-align: center;
 }
 
 .review cite {
-    display: block;
-    font-family: 'Lato';
+    font-family: 'Lato-Regular';
     font-size: 18px;
-    color: white;
+    font-style: normal;
+
+    display: block;
+
     margin: 37px;
+
+    color: white;
 }
 
 .quote {
-    position: absolute;
-    font-family: Georgia, Times, "Times New Roman", serif;
+    font-family: Georgia, Times, 'Times New Roman', serif;
     font-size: 96px;
+
+    position: absolute;
+    bottom: 200px;
+    left: 29px;
+
     color: white;
-    bottom: 294px;
-    left: 29px
 }
 
 .reservation-section {
@@ -535,12 +669,12 @@ nav {
 
 .images {
     position: absolute;
-    height: 538px;
-    width: 570px;
-    margin: 0;
-    padding: 0;
     left: 40px;
 
+    width: 570px;
+    height: 538px;
+    margin: 0;
+    padding: 0;
 }
 
 .images :first-child {
@@ -553,22 +687,27 @@ nav {
 
 .book {
     position: absolute;
-    height: 508px;
+    left: 710px;
+
     width: 430px;
+    height: 508px;
     margin: 0;
     padding: 0;
-    left: 710px;
+
     text-align: center;
 }
 
 .book h2 {
-    position: relative;
     font-family: 'Yeseva One';
     font-size: 36px;
+
+    position: relative;
+    top: -4px;
+
     margin: 0 auto;
     padding: 0;
-    color: #cc9900;
-    top: -4px;
+
+    color: #c90;
 }
 
 .book img {
@@ -576,94 +715,103 @@ nav {
 }
 
 .book p {
-    font-family: 'Lato';
-    font-size: 16px;
-    margin: 11px 0;
+    font-family: 'Lato-Regular';
     line-height: 24px;
+
+    margin: 11px 0;
 }
 
 .booking-form {
     position: relative;
-    right: 14px;
     top: 8px;
+    right: 14px;
+
     width: 458px;
     height: 210px;
 }
 
 fieldset {
-    border: none;
     width: 100%;
+
+    border: none;
 }
 
 input {
-    height: 36px;
-    width: 200px;
-    margin: 28px 0 18px 0;
+    font-family: 'Open Sans Italic';
     font-size: 16px;
-    color: #7c7c7c;
+
+    width: 200px;
+    height: 36px;
+    margin: 28px 0 18px 0;
+
     text-indent: 14px;
+
+    color: #7c7c7c;
 }
 
 select {
-    height: 36px;
-    width: 200px;
-    float: right;
-    margin: 6px 2px;
-    border: 2px solid #c8c6c6;
-    font-family: 'Open Sans', serif;
+    font-family: 'Open Sans';
     font-size: 16px;
+
+    float: right;
+
+    width: 200px;
+    height: 36px;
+    margin: 6px 2px;
+
     color: #7c7c7c;
+    border: 1px solid #c8c6c6;
+    background: rgba(255, 255, 255, .3);
 }
 
 .name-form {
     float: left;
-    border: 2px solid #c89f2d;
-    outline: none;
-    background: rgba(255, 255, 255, 0.3);
+
+    border: 1px solid #c89f2d;
+    background: rgba(255, 255, 255, .3);
 }
 
-input[type="email"] {
+input[type='email'] {
     float: right;
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px solid #c8c6c6;
+
+    border: 1px solid #c8c6c6;
+    background: rgba(255, 255, 255, .3);
 }
 
 .date-form {
     float: left;
-    margin-top: 16px;
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px solid #c8c6c6;
 
+    margin-top: 16px;
+
+    border: 1px solid #c8c6c6;
+    background: rgba(255, 255, 255, .3);
 }
 
 label {
-    position: absolute;
+    font-family: 'Open Sans Bold';
     font-size: 14px;
-    color: #c9a131;
-    text-transform: capitalize;
+
+    position: absolute;
+
     text-align: left;
+    text-transform: capitalize;
+
+    color: #c9a131;
 }
 
-fieldset p {
-    font-family: 'Open Sans', serif;
-}
-
-label[for="name"] {
+label[for='name'] {
     left: 2px;
 }
 
-label[for="email"] {
+label[for='email'] {
+    right: 170px;
+
     text-align: left;
-    right: 170px
 }
 
-label[for="date"] {
+label[for='date'] {
     top: 96px;
-    left: 0px;
-}
-
-input[type="date"]::-webkit-datetime-edit {
-    visibility: hidden;
+    left: 0;
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -672,13 +820,16 @@ input[type="date"]::-webkit-datetime-edit {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
     margin: 0;
+
+    -webkit-appearance: none;
 }
 
 .person-number {
+    font-family: 'Open Sans Italic';
+
     top: 96px;
-    left: 0px;
+    left: 0;
 }
 
 fieldset div :first-child {
@@ -691,6 +842,7 @@ fieldset div :last-child {
 
 .form-column {
     position: relative;
+
     width: 203px;
 }
 
@@ -702,8 +854,10 @@ select {
     position: absolute;
     top: 130px;
     right: 8px;
+
     width: 25px;
     height: 25px;
+
     pointer-events: none;
 }
 
@@ -712,23 +866,27 @@ select {
     background: transparent;
 }
 
-input[type="submit"] {
+input[type='submit'] {
     font-family: 'Open Sans', serif;
     font-size: 16px;
-    color: white;
-    text-align: center;
+
     position: relative;
     bottom: 11px;
-    background: #c9a131;
+
+    text-align: center;
+
+    color: white;
     border: none;
-    outline: none;
+    background: #c9a131;
 }
 
 footer {
     width: 100%;
     height: 320px;
     padding: 50px 205px;
+
     background: #191919;
+
     grid-row-start: 2;
     grid-row-end: 3;
 }
@@ -737,10 +895,13 @@ footer {
 
 footer div {
     float: left;
+
     width: 390px;
     height: 218px;
-    color: white;
+
     text-align: center;
+
+    color: white;
 }
 
 footer img {
@@ -751,28 +912,35 @@ footer img {
 
 
 footer h3 {
-    text-transform: capitalize;
     font-family: 'Yeseva One';
     font-size: 21px;
-    margin: 7px 0px;
+
+    margin: 7px 0;
+
+    text-transform: capitalize;
 }
 
 footer p {
     font-family: 'Open Sans';
     font-size: 16px;
-    margin: 0;
     line-height: 1.5em;
+
+    margin: 0;
+
     text-decoration: none;
+
     color: white;
 }
 
 footer a {
-   text-decoration: none;
+    margin: 4px;
+
+    text-decoration: none;
+
     color: white;
-    margin: 4px; 
 }
 
-.footer-first-column {
+.footer-about {
     margin-right: 10px;
 }
 
@@ -781,15 +949,17 @@ footer a {
 }
 
 .footer-social {
-    height: 100%;
     position: relative;
     top: 50px;
     left: 5px;
+
+    height: 100%;
 }
 
 .footer-payment {
-    height: 100%;
     position: relative;
     top: 50px;
     left: 5px;
+
+    height: 100%;
 }

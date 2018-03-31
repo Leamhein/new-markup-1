@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>LAMBDA</title>
     <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700|Lato|Open+Sans|Yeseva+One" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -13,44 +12,49 @@
 <body>
     <header>
         <div class="container">
-            <div class="header__logo">
+            <div class="header-logo">
                 <p>lambda</p>
+                <div><h1 display: none>Lambda Restaurant</h1></div>
             </div>
             <nav>
                 <ul class="nav-menu">
-                    <li class="nav-menu__b-home"><a href="#">home</a></li>
-                    <li class="nav-menu__b-about"><a href="#about">about</a></li>
-                    <li class="nav-menu__b-ingredients"><a href="#ingredients">ingredients</a></li>
-                    <li class="nav-menu__b-menu"><a href="#menu">menu</a></li>
-                    <li class="nav-menu__b-reviews"><a href="#reviews">reviews</a></li>
-                    <li class="nav-menu__b-reservation"><a href="#book">reservations</a></li>
-                    <li class="nav-menu__b-social1"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li class="nav-menu__b-social2"><a href="#"><i class="fa fa-youtube"></i></a></li>
-                    <li class="nav-menu__b-social3"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li class="a-home"><a href="#">home</a></li>
+                    <li class="a-about"><a href="#about">about</a></li>
+                    <li class="a-ingredients"><a href="#ingredients">ingredients</a></li>
+                    <li class="a-menu"><a href="#menu">menu</a></li>
+                    <li class="a-reviews"><a href="#reviews">reviews</a></li>
+                    <li class="a-reservation"><a href="#book">reservations</a></li>
                 </ul>
             </nav>
+            <div class="header-social">
+                <ul>
+                    <li class="a-social1"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="a-social2"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li class="a-social3"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
         <section class="promo-section">
             <div class="container">
-                <div class="promo-section__titles">
+                <div>
                     <h2>the right ingredients
                         <p>for the right food</p>
                     </h2>
                     <img src="images/divider-white.png" alt="">
                 </div>
-                <div class="promo-section__buttons">
-                    <button class="promo-section__buttons__b-book"><a href="#book">book a table</a></button>
-                    <button class="promo-section__buttons__b-menu"><a href="#menu">see the menu</a></button>
+                <div class="promo-buttons">
+                    <button class="promo-buttons__a-book"><a href="#book">book a table</a></button>
+                    <button class="promo-buttons__a-menu"><a href="#menu">see the menu</a></button>
                 </div>
             </div>
         </section>
         <section class="about-section">
             <div class="container">
-                <article class="about-section__b-description">
+                <article class="description">
                     <h2><a name="about">Just the right food</a></h2>
-                    <img class="about-section__about__divider" src="images/divider-gold.png" alt="">
+                    <img class="about-section__divider" src="images/divider-gold.png" alt="">
                     <figure>
                         <img class="main-img" src="images/dish.png" alt="dish">
                         <figcaption>
@@ -216,18 +220,18 @@
                             <div>
                                 <div class="form-column">
                                     <p><label for="name">name</label>
-                                        <input class="name-form" type="text" id="name" placeholder="your name *"></p>
+                                        <input class="name-form" type="text" id="name" required placeholder="your name *"></p>
                                     <p><label for="date">date</label>
-                                        <input class="date-form" type="text" placeholder="date*" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}"></p>
+                                        <input class="date-form" type="text" required placeholder="date*" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}"></p>
                                     <span class="open-button">
       <button type="button"><i class="fa fa-calendar"></i></button>
     </span>
                                 </div>
                                 <div class="form-column">
                                     <p><label for="email">email</label>
-                                        <input type="email" id="email" placeholder="your email *"></p>
+                                        <input type="email" id="email" required placeholder="your email *"></p>
                                     <p><label class="person-number">party number</label>
-                                        <select>
+                                        <select required>
                                    <option value="" disabled selected hidden>party number</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -248,7 +252,7 @@
         </section>
     </main>
     <footer>
-        <div class="footer-first-column">
+        <div class="footer-about">
             <h3>about us</h3>
             <img src="images/divider-white_ingredients-section.png" alt="">
             <p>Lambda's new and expanded Chelsea location represents a truly authentic <b>Greek</b> patisserie, featuring breakfasts of fresh croissants and steaming bowls of café.</p>
